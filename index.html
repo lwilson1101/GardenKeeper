@@ -38,6 +38,12 @@ max-width: 480px;
 margin: 0 auto;
 position: relative;
 font-size: 16px;
+-webkit-text-size-adjust: 100%;
+}
+body.modal-open {
+overflow: hidden;
+position: fixed;
+width: 100%;
 }
 
 .app-header {
@@ -381,19 +387,29 @@ flex-shrink: 0;
 display: none;
 position: fixed;
 inset: 0;
-background: rgba(0,0,0,0.5);
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0,0,0,0.7);
 z-index: 500;
 align-items: flex-end;
+-webkit-overflow-scrolling: touch;
 }
-.modal-overlay.open { display: flex; }
+.modal-overlay.open {
+display: flex;
+}
 .modal {
 background: var(–cream);
 border-radius: 24px 24px 0 0;
-padding: 24px 20px 40px;
+padding: 24px 20px 60px;
 width: 100%;
-max-height: 90vh;
+max-height: 88vh;
 overflow-y: auto;
+-webkit-overflow-scrolling: touch;
 animation: slideUp 0.3s ease;
+position: relative;
+z-index: 501;
 }
 @keyframes slideUp {
 from { transform: translateY(100%); }
@@ -1142,8 +1158,14 @@ function openFab() {
 function today() { return new Date().toISOString().split('T')[0]; }
 
 // ---- MODALS ----
-function openModal(id) { document.getElementById(id).classList.add('open'); }
-function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+function openModal(id) { 
+  document.getElementById(id).classList.add('open'); 
+  document.body.classList.add('modal-open');
+}
+function closeModal(id) { 
+  document.getElementById(id).classList.remove('open'); 
+  document.body.classList.remove('modal-open');
+}
 
 function openNoteModal(id) {
   document.getElementById('note-edit-id').value = id || '';
