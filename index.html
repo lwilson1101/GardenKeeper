@@ -29,6 +29,10 @@
 
 - { box-sizing: border-box; margin: 0; padding: 0; }
 
+html {
+background: #4d7a52;
+}
+
 body {
 font-family: ‘DM Sans’, sans-serif;
 background: var(–cream);
@@ -215,18 +219,19 @@ padding: 6px 14px;
 font-size: 12px;
 background: var(–cream-dark);
 color: var(–text);
+font-weight: 600;
 }
-.btn-danger { background: #fde8e6; color: var(–danger); }
-.btn-water { background: #e0f0f8; color: var(–water); }
-.btn-fertilize { background: #fdf3dc; color: var(–fertilize); }
+.btn-danger { background: #fde8e6; color: #8b2a20; font-weight: 600; }
+.btn-water { background: #e0f0f8; color: #2a5c78; font-weight: 600; }
+.btn-fertilize { background: #fdf3dc; color: #7a5c00; font-weight: 600; }
 
 /* Form */
 .form-group { margin-bottom: 14px; }
 .form-label {
 display: block;
 font-size: 12px;
-font-weight: 500;
-color: var(–text-muted);
+font-weight: 700;
+color: var(–soil);
 margin-bottom: 6px;
 text-transform: uppercase;
 letter-spacing: 0.5px;
@@ -388,32 +393,33 @@ display: none;
 position: fixed;
 top: 0;
 left: 0;
+right: 0;
+bottom: 0;
 width: 100%;
 height: 100%;
-height: 100dvh;
-background: rgba(0,0,0,0.75);
+background: rgba(0,0,0,0.82);
 z-index: 500;
-align-items: flex-end;
-justify-content: flex-end;
 flex-direction: column;
+align-items: stretch;
+justify-content: flex-end;
 }
 .modal-overlay.open {
 display: flex;
 }
 .modal {
-background: var(–cream);
+background: #f5f0e8;
 border-radius: 24px 24px 0 0;
-padding: 24px 20px 80px;
+padding: 24px 20px 100px;
 width: 100%;
-height: 85vh;
-height: 85dvh;
-overflow-y: scroll;
+max-height: 88%;
+overflow-y: auto;
 -webkit-overflow-scrolling: touch;
 overscroll-behavior: contain;
-animation: slideUp 0.3s ease;
+animation: slideUp 0.28s ease;
 position: relative;
 z-index: 501;
 flex-shrink: 0;
+box-shadow: 0 -8px 40px rgba(0,0,0,0.3);
 }
 @keyframes slideUp {
 from { transform: translateY(100%); }
@@ -620,9 +626,11 @@ box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 .chip {
 padding: 6px 14px;
 border-radius: 20px;
-font-size: 12px;
-border: 1.5px solid var(–border);
+font-size: 13px;
+font-weight: 600;
+border: 2px solid var(–border);
 background: var(–white);
+color: var(–soil);
 cursor: pointer;
 transition: all 0.15s;
 font-family: ‘DM Sans’, sans-serif;
