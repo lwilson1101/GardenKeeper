@@ -1,0 +1,96 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a3d20"/>
+      <stop offset="50%" style="stop-color:#2d5a32"/>
+      <stop offset="100%" style="stop-color:#3d6e45"/>
+    </linearGradient>
+    <linearGradient id="pot" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4aa7a"/>
+      <stop offset="100%" style="stop-color:#8a5830"/>
+    </linearGradient>
+    <linearGradient id="soil" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5a3a18"/>
+      <stop offset="100%" style="stop-color:#3a2008"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(0,0,0,0.4)"/>
+    </filter>
+    <filter id="leafshadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="6" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="60%" style="stop-color:transparent"/>
+      <stop offset="100%" style="stop-color:rgba(0,0,0,0.35)"/>
+    </radialGradient>
+    <pattern id="dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1" fill="rgba(255,255,255,0.04)"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <rect width="512" height="512" fill="url(#dots)"/>
+
+  <!-- Pot -->
+
+  <path d="M168,420 L196,318 L316,318 L344,420 Z" fill="url(#pot)" filter="url(#shadow)"/>
+  <rect x="156" y="304" width="200" height="22" rx="11" fill="#d4aa7a"/>
+  <rect x="160" y="304" width="192" height="18" rx="9" fill="#e0ba8a"/>
+  <path d="M175,318 C185,312 200,310 215,312" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="4" stroke-linecap="round"/>
+  <rect x="155" y="412" width="202" height="18" rx="9" fill="#7a4820"/>
+
+  <!-- Soil -->
+
+  <ellipse cx="256" cy="314" rx="94" ry="22" fill="url(#soil)"/>
+  <ellipse cx="240" cy="308" rx="40" ry="8" fill="rgba(255,255,255,0.06)"/>
+
+  <!-- Back monstera -->
+
+  <g filter="url(#leafshadow)">
+    <path d="M256,308 C256,308 168,258 152,188 C136,120 176,80 212,104 C228,114 240,136 248,160 C248,160 252,130 264,112 C288,76 336,84 344,152 C352,218 280,300 256,308Z" fill="#4a8a50"/>
+    <ellipse cx="208" cy="196" rx="18" ry="24" fill="#2a5a30" transform="rotate(-15,208,196)"/>
+    <ellipse cx="244" cy="152" rx="14" ry="18" fill="#2a5a30" transform="rotate(-5,244,152)"/>
+    <ellipse cx="296" cy="168" rx="15" ry="20" fill="#2a5a30" transform="rotate(12,296,168)"/>
+    <path d="M256,308 C252,270 240,230 220,190" fill="none" stroke="#3a7a40" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <path d="M256,308 C260,268 272,228 292,192" fill="none" stroke="#3a7a40" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  </g>
+
+  <!-- Left alocasia -->
+
+  <g filter="url(#leafshadow)">
+    <path d="M248,305 C248,305 168,272 144,216 C122,162 148,124 180,140 C200,150 220,178 236,210 C240,220 244,240 248,260Z" fill="#6aaa6e"/>
+    <path d="M248,305 C236,270 210,240 190,210" fill="none" stroke="#4a8a50" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+    <path d="M220,230 C210,222 196,218 186,224" fill="none" stroke="#4a8a50" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+    <path d="M232,256 C220,250 206,248 196,256" fill="none" stroke="#4a8a50" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  </g>
+
+  <!-- Right tropical -->
+
+  <g filter="url(#leafshadow)">
+    <path d="M264,305 C264,305 338,268 366,212 C392,158 370,118 338,136 C318,148 298,178 280,212 C276,222 270,244 264,268Z" fill="#90c894"/>
+    <path d="M264,305 C274,268 296,238 318,212" fill="none" stroke="#5a9a60" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+    <path d="M294,240 C304,232 318,230 328,238" fill="none" stroke="#5a9a60" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  </g>
+
+  <!-- Front highlight leaf -->
+
+  <g filter="url(#leafshadow)">
+    <path d="M250,306 C250,306 196,282 178,244 C162,208 180,184 202,196 C216,204 232,228 244,256Z" fill="#b8deba" opacity="0.9"/>
+    <path d="M250,306 C238,278 216,252 202,228" fill="none" stroke="#7aaa7e" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  </g>
+
+  <!-- Trailing ivy -->
+
+  <path d="M188,428 C178,448 164,468 148,490" fill="none" stroke="#4a7a30" stroke-width="4" stroke-linecap="round"/>
+  <path d="M166,468 C156,460 148,466 150,474 C152,482 164,480 166,468Z" fill="#7ab87e"/>
+  <path d="M150,490 C140,484 132,492 136,500 C140,506 152,502 150,490Z" fill="#5a9a5e"/>
+  <path d="M324,428 C334,450 346,470 360,492" fill="none" stroke="#4a7a30" stroke-width="4" stroke-linecap="round"/>
+  <path d="M346,470 C356,462 364,470 360,478 C356,486 344,482 346,470Z" fill="#7ab87e"/>
+  <path d="M360,492 C370,486 378,494 374,502 C370,508 358,504 360,492Z" fill="#5a9a5e"/>
+
+  <!-- Vignette -->
+
+  <rect width="512" height="512" fill="url(#vignette)"/>
+</svg>
